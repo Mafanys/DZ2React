@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Distruct from './components/Distrucrurization/distruct';
+import Example1 from './components/Example1/example1';
+import Example2 from './components/Example2/example2';
+import User from './components/Users/user';
+
+const user = {
+  name: "Sasha",
+  age: 20,
+  sity: "Kyiv"
+}
+const {name,age,sity} = user;
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Example1 />
+      <Example2>
+        <h1>World</h1>
+      </Example2>  
+      <Example2 name="Sasha"/> 
+      <User name = {user.name} age = {user.age} sity = {user.sity}/>
+      <Example1 />
+      <Example2>
+        <h1>World</h1>
+      </Example2>  
+      <Example2 name="Sasha"/> 
+      <User name = {"Igor"} age = {18} sity = {"Lviv"}/>
+      <Distruct name = {name} age = {age}/>
     </div>
   );
 }
